@@ -1,0 +1,18 @@
+{
+  "benchmark": "synthetic-a",
+  "feature_count": 4,
+  "instrument": {
+    "model": "synthetic-model",
+    "layer": 0,
+    "sae": "synthetic-dictionary",
+    "token_policy": "all-input-tokens"
+  },
+  "source": {
+    "synthetic": true,
+    "description": "Illustrative token means for two benchmark items"
+  },
+  "activations": [
+    {"0": 2.0, "2": 1.0},
+    {"0": 1.0}
+  ]
+}

@@ -1,0 +1,28 @@
+[project]
+name = "tricg"
+version = "0.1.0"
+description = "Concept coverage profiles for benchmark comparison and selection"
+readme = "README.md"
+authors = [
+    { name = "Baimam Boukar", email = "baimamboukar@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "numpy>=2.5.4",
+]
+
+[project.scripts]
+tricg = "tricg.cli:main"
+
+[tool.ruff]
+line-length = 100
+
+[build-system]
+requires = ["uv_build>=0.11.29,<0.12.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "ruff>=0.17.1",
+]
