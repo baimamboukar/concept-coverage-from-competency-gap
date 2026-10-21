@@ -1,21 +1,29 @@
 [project]
 name = "tricg"
 version = "0.1.0"
-description = "Concept coverage profiles for benchmark comparison and selection"
+description = "concept coverage profiles for benchmark comparison, selection and prunning."
 readme = "README.md"
 authors = [
-    { name = "Baimam Boukar", email = "baimamboukar@gmail.com" }
+    { name = "Baimam Boukar Jean Jacques", email = "baimamboukar@gmail.com" }
 ]
 requires-python = ">=3.12"
 dependencies = [
+    "loguru>=0.7.3",
+    "neuronpedia>=1.2.1",
+    "nnsight>=0.8.1",
     "numpy>=2.5.4",
+    "rich>=15.0.0",
+    "sae-lens>=6.54.12",
+    "tabulate>=0.10.0",
+    "transformers>=5.20.2",
+    "typer>=0.27.3",
 ]
 
-[tool.uv]
-package = false
+[project.scripts]
+tricg = "tricg.cli:app"
 
 [tool.ruff]
-line-length = 100
+line-length = 120
 
 [build-system]
 requires = ["uv_build>=0.11.29,<0.12.0"]
